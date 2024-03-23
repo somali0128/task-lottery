@@ -6,9 +6,10 @@ class Audit {
 
     // The sample logic can be something like mentioned below to validate the submission
     let vote;
-    console.log('SUBMISSION VALUE', submission_value, winnerNum, round);
+    const formattedSubmission = submission_value.substring(0, 2);
+    console.log('SUBMISSION VALUE', formattedSubmission, winnerNum, round);
     try {
-      if (submission_value == winnerNum) {
+      if (formattedSubmission == winnerNum) {
         // For successful flow we return true (Means the audited node submission is correct)
         console.log('CONGRATULATIONS! YOU ARE THE WINNER!');
         vote = true;

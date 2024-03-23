@@ -1,8 +1,8 @@
 # Name and metadata of your task
-task_name: 'task name'
-author: 'Koii'
-description: 'description'
-repositoryUrl: 'https://github.com/koii-network/task-template' #replace with your own repo url
+task_name: 'Lottery Game Beta'
+author: 'Soma'
+description: "Feel lucky today? Try your luck with our lottery game! Chance to win 1000 KOII! If you doesn't win this round, your stake will be slashed by 1 KOII. (No slash during beta version)"
+repositoryUrl: 'https://github.com/somali0128/task-lottery'
 imageUrl: 'imageUrl'
 
 # network value can be DEVELOPMENT , ARWEAVE or IPFS, Recommended IPFS when deploying to testnet as the cli automatically takes care of uploading the executable with the help of web3.js key
@@ -19,13 +19,13 @@ submission_window: 350
 
 # Amounts in KOII
 
-minimum_stake_amount: 1.9
+minimum_stake_amount: 1.1
 
 # total_bounty_amount cannot be grater than bounty_amount_per_round
 # total bounty is not accepted in case of update task
-total_bounty_amount: 100
+total_bounty_amount: 1000
 
-bounty_amount_per_round: 100
+bounty_amount_per_round: 1000
 
 #Number of times allowed to re-submit the distribution  list in case the distribution list is audited
 allowed_failed_distributions: 3
@@ -37,6 +37,9 @@ space: 1
 # To add more global variables and task variables, please refer the type,value,description format shown below
 
 requirementsTags:
+  - type: TASK_VARIABLE
+    value: 'Lottery_Number'
+    description: 'Enter your lucky number, should be 2 numbers(00-99). For example: 77.'
   - type: CPU
     value: '4-core'
   - type: RAM
